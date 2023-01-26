@@ -1,6 +1,8 @@
 # Install
 ```
-npm i sprinting-logger
+
+npm i nest-logger
+
 ```
 # 
 
@@ -40,9 +42,7 @@ Use in your project by creating a logger.module.ts with content like this:
     {
       provide: LoggerService,
       useFactory: (config: ConfigService) => {
-        const config: ConfigOptions = {
-          
-        };
+        
       },
       inject: [ConfigService],
     },
@@ -71,7 +71,7 @@ export class ItemModule {}
 ```
 
 And log stuff:
-```typescript
+```
 import { LoggerService } from "sprinting-logger";
 constructor(private readonly logger: LoggerService) {}
 
